@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Quiz</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    .btn { margin: 5px; padding: 8px 16px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>Quick Tech Quiz</h2>
+  <div id="quiz-container">
+    <p id="question">What language is known for indentation-based syntax?</p>
+    <button class="btn" onclick="checkAnswer('Python')">Python</button>
+    <button class="btn" onclick="checkAnswer('C++')">C++</button>
+    <button class="btn" onclick="checkAnswer('Java')">Java</button>
+    <p id="result"></p>
+  </div>
+  <script>
+    function checkAnswer(ans) {
+      const res = document.getElementById('result');
+      if (ans === 'Python') {
+        res.innerHTML = "✅ Correct!";
+        res.style.color = "green";
+      } else {
+        res.innerHTML = "❌ Try again!";
+        res.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
